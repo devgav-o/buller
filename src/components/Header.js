@@ -55,7 +55,7 @@ const Header = () => {
                     <nav className='hidden md:flex items-center space-x-8 rtl:space-x-reverse'>
                         <button
                             onClick={() => scrollToSection('home')}
-                            className='text-[#58432a] hover:text-[#7a5a3a] transition-colors duration-200 font-medium'
+                            className=' text-[#58432a] hover:text-[#7a5a3a] transition-colors duration-200 font-medium'
                         >
                             {t('home')}
                         </button>
