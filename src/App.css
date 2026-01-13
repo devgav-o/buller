@@ -21,7 +21,8 @@ html {
 
 /* Smooth transitions for all interactive elements */
 button {
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease,
+        box-shadow 0.3s ease;
 }
 
 button:hover {
@@ -34,7 +35,8 @@ button:active {
 
 /* Card hover effects */
 .hover\:shadow-xl:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 /* Smooth image transitions */

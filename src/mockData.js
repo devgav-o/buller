@@ -235,10 +235,13 @@ export const menuItems = {
 };
 
 export const galleryImages = [
-    'https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?w=800&q=80',
-    'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&q=80',
-    'https://images.unsplash.com/photo-1548940740-204726a19be3?w=800&q=80',
-    'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80',
-    'https://images.unsplash.com/photo-1619221882174-34f2fdb6b5bb?w=800&q=80',
-    'https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=800&q=80',
+    '1.png',
+    '2.png',
+    '3.png',
+    '4.png',
+    '5.png',
+    '6.png',
+    '7.png',
+    '8.png',
+    '9.png',
 ];
