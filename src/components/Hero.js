@@ -46,10 +46,7 @@ const Hero = () => {
                     <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'>
                         <Button
                             onClick={() =>
-                                window.open(
-                                    'https://www.10bis.co.il/next/en/restaurants/menu/delivery/5302/new-deli',
-                                    '_blank'
-                                )
+                                window.open('https://www.10bis.co.il', '_blank')
                             }
                             className='bg-[#d4af6e] hover:bg-[#c49e5d] text-white px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105'
                         >
