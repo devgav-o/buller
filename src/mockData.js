@@ -58,10 +58,9 @@ export const translations = {
         footerRights: 'כל הזכויות שמורות',
 
         // Menu categories
-        sandwiches: 'כריכים',
-        vegan: 'טבעוני',
-        sides: 'תוספות',
-        drinks: 'משקאות',
+        salty: 'מלוחים',
+        dips: 'מטבלים Home Made (250 גר׳)',
+        sweets: 'מתוקים',
     },
     en: {
         // Navigation
@@ -120,116 +119,162 @@ export const translations = {
         footerRights: 'All rights reserved',
 
         // Menu categories
-        sandwiches: 'Sandwiches',
-        vegan: 'Vegan',
-        sides: 'Sides',
-        drinks: 'Drinks',
+        salty: 'Savory',
+        dips: 'Home Made Dips',
+        sweets: 'Sweets',
     },
 };
 
 export const menuItems = {
-    sandwiches: [
+    salty: [
         {
             id: 1,
-            name: { he: 'כריך עוף חריף', en: 'Spicy Chicken Sandwich' },
-            description: {
-                he: 'חזה עוף מתובל, ירקות טריים, רוטב חריף ביתי',
-                en: 'Seasoned chicken breast, fresh vegetables, homemade spicy sauce',
+            name: {
+                he: '12 כריכי ביס (סלט ביצים/טונה/סלמון)',
+                en: '12 Roll Sandwiches (Egg salad/Tuna/Salmon)',
             },
-            price: '42₪',
+            description: {
+                he: 'סט של 12 כריכים קטנים - בחר מסלט ביצים, טונה, או סלמון',
+                en: 'A set of 12 mini rolls - choose from egg salad, tuna, or salmon',
+            },
+            price: '144₪',
             isVegan: false,
         },
         {
             id: 2,
-            name: { he: 'כריך טריאקי עוף', en: 'Chicken Teriyaki Sandwich' },
+            name: { he: 'מגש ירקות עונתיים', en: 'Seasonal Vegetable Platter' },
             description: {
-                he: 'עוף בציפוי טריאקי מתוק, כרוב סגול, בצל מקורמל',
-                en: 'Sweet teriyaki glazed chicken, purple cabbage, caramelized onions',
+                he: 'מגש עשיר עם ירקות טריים עונתיים - עגבניות, מלפפון, גזר וחסה',
+                en: 'Generous platter with fresh seasonal vegetables - tomatoes, cucumbers, carrots and lettuce',
             },
-            price: '44₪',
-            isVegan: false,
+            price: '128₪',
+            isVegan: true,
         },
         {
             id: 3,
-            name: { he: 'כריך עוף מרינטה', en: 'Marinated Chicken Sandwich' },
+            name: { he: 'סלט אישי', en: 'Personal Salad' },
             description: {
-                he: 'חזה עוף במרינדה מיוחדת, עגבניות, חסה, מיונז שום',
-                en: 'Specially marinated chicken breast, tomatoes, lettuce, garlic mayo',
+                he: 'סלט טרי בפרט - ירקות שונות לבחירתך עם רוטב בתוספת חינם',
+                en: 'Fresh custom salad - choose your vegetables with complimentary dressing',
             },
-            price: '40₪',
-            isVegan: false,
+            price: '42₪',
+            isVegan: true,
         },
         {
             id: 4,
-            name: { he: 'כריך נקניק', en: 'Sausage Sandwich' },
+            name: { he: 'כיכר לחם מחמצת', en: 'Sourdough Bread' },
             description: {
-                he: 'נקניק מעושן איכותי, בצל מטוגן, חרדל ודבש',
-                en: 'Quality smoked sausage, fried onions, honey mustard',
+                he: 'לחם מחמצת טרי וטעים - אידיאלי כצד או להכנת כריכים ביתיים',
+                en: 'Fresh and delicious sourdough bread - perfect as a side or for homemade sandwiches',
             },
-            price: '38₪',
-            isVegan: false,
+            price: '24₪',
+            isVegan: true,
         },
-    ],
-    vegan: [
         {
             id: 5,
-            name: { he: 'כריך שווארמה טבעוני', en: 'Vegan Shawarma Sandwich' },
+            name: { he: 'קרקרים גרעינים', en: 'Seed Crackers' },
             description: {
-                he: 'שווארמה צמחונית, חומוס, טחינה, סלט ישראלי',
-                en: 'Plant-based shawarma, hummus, tahini, Israeli salad',
+                he: 'קרקרים פריכים עשירים בגרעינים - בריאי וטעימים',
+                en: 'Crispy crackers rich with seeds - healthy and delicious',
             },
-            price: '38₪',
-            isVegan: true,
-        },
-        {
-            id: 6,
-            name: { he: 'סלט ים תיכוני', en: 'Mediterranean Salad' },
-            description: {
-                he: 'ירקות טריים, זיתים, גבינת פטה טבעונית, ויניגרט לימון',
-                en: 'Fresh vegetables, olives, vegan feta, lemon vinaigrette',
-            },
-            price: '34₪',
+            price: '26₪',
             isVegan: true,
         },
     ],
-    sides: [
+    dips: [
+        {
+            id: 6,
+            name: { he: 'צזיקי', en: 'Tzaziki' },
+            description: {
+                he: 'תערובת יוגורט עם מלפפון וצמחי תבלין - קר וטרוף',
+                en: 'Yogurt blend with cucumber and fresh herbs - cool and refreshing',
+            },
+            price: '21₪',
+            isVegan: false,
+        },
         {
             id: 7,
-            name: { he: "צ'יפס בית", en: 'House Fries' },
+            name: { he: 'מטבוחה', en: 'Matbucha' },
             description: {
-                he: "צ'יפס פריך, מלח ים, רוזמרין",
-                en: 'Crispy fries, sea salt, rosemary',
+                he: 'תערובת עגבניות ופלפלים מטוגנים - קלאסי מרוקאי',
+                en: 'Roasted tomato and pepper blend - Moroccan classic',
             },
-            price: '18₪',
+            price: '29₪',
+            isVegan: true,
         },
         {
             id: 8,
-            name: { he: 'טבעות בצל', en: 'Onion Rings' },
+            name: { he: 'זיתים', en: 'Olives' },
             description: {
-                he: "טבעות בצל פריכות עם רוטב צ'ילי מתוק",
-                en: 'Crispy onion rings with sweet chili sauce',
+                he: 'זיתים טריים ובחירה - מלוח וטעים',
+                en: 'Fresh hand-picked olives - salty and flavorful',
             },
-            price: '20₪',
+            price: '18₪',
+            isVegan: true,
         },
-    ],
-    drinks: [
         {
             id: 9,
-            name: { he: 'לימונדה ביתית', en: 'Homemade Lemonade' },
+            name: { he: 'סלט טונה', en: 'Tuna Salad' },
             description: {
-                he: 'לימונדה טבעית עם נענע',
-                en: 'Natural lemonade with fresh mint',
+                he: 'טונה זה עם ירקות וברגר ביתי - עשיר וטעים',
+                en: 'Fresh tuna with vegetables and homemade mayo - rich and satisfying',
             },
-            price: '14₪',
+            price: '29₪',
+            isVegan: false,
         },
         {
-            id: 10,
-            name: { he: 'קפה קר', en: 'Iced Coffee' },
+            id: 9,
+            name: { he: 'סלט ביצים', en: 'Egg Salad' },
             description: {
-                he: 'קפה קר עם חלב/חלב צמחי',
-                en: 'Iced coffee with milk/plant milk',
+                he: 'ביצים קשות מעורבבות עם מיונז וצמחי תבלין - רך וטעים',
+                en: 'Hard-boiled eggs mixed with mayo and fresh herbs - creamy and delicious',
             },
-            price: '16₪',
+            price: '29₪',
+            isVegan: false,
+        },
+    ],
+    sweets: [
+        {
+            id: 10,
+            name: { he: '9 שוקולד צ׳יפס', en: '9 Chocolate Chips' },
+            description: {
+                he: 'עוגיות שוקולד חם - מתוקות ופרוסות שוקולד',
+                en: 'Fresh baked chocolate chip cookies - sweet with rich chocolate pieces',
+            },
+            price: '99₪',
+        },
+        {
+            id: 11,
+            name: { he: 'עוגת שמרים', en: 'Danish' },
+            description: {
+                he: 'עוגת שמרים טרייה - פריכה מבחוץ, רכה בתוך',
+                en: 'Fresh Danish pastry - crispy outside, soft inside',
+            },
+            price: '48₪',
+        },
+        {
+            id: 11,
+            name: {
+                he: 'קופסת עוגיות (טחינה/מייפל פקאן/ביסקוטי)',
+                en: 'Box of Cookies (Tahina/Maple Pecan/Biscoti)',
+            },
+            description: {
+                he: 'מבחר עוגיות בעבודת יד - טחינה, מייפל פקאן וביסקוטי',
+                en: 'Assorted handmade cookies - tahina, maple pecan and biscotti varieties',
+            },
+            price: '44₪',
+        },
+        {
+            id: 11,
+            name: {
+                he: 'פונדט',
+                en: 'Fondant',
+            },
+            description: {
+                he: 'שוקולד ממס עם פירות ומרשמלו - טעים להטבול',
+                en: 'Melting chocolate with fruits and marshmallows - perfect for dipping',
+            },
+            price: '48₪',
         },
     ],
 };
