@@ -14,12 +14,33 @@ import { Leaf } from 'lucide-react';
 const Menu = () => {
     const { t, language } = useLanguage();
 
+    const categoryImages = {
+        salty: '/category-images/salty.jpeg',
+        dips: '/category-images/dips.jpeg',
+        sweets: '/category-images/sweets.jpeg',
+    };
+
     const renderMenuCategory = (category, title) => {
         return (
             <div key={category} className='mb-12'>
+                {/* Category Title */}
                 <h3 className='text-2xl font-bold text-[#58432a] mb-6'>
                     {t(category)}
                 </h3>
+                {/* Category Image */}
+                {categoryImages[category] && (
+                    <div className='relative w-full h-48 sm:h-64 md:h-80 rounded-lg overflow-hidden mb-8 shadow-md'>
+                        <img
+                            src={categoryImages[category]}
+                            alt={t(category)}
+                            className='w-full h-full object-cover'
+                            onError={(e) => {
+                                e.target.style.display = 'none';
+                            }}
+                        />
+                    </div>
+                )}
+                {/* Category Items */}
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                     {menuItems[category].map((item) => (
                         <Card
