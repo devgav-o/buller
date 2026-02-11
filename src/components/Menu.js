@@ -10,6 +10,7 @@ import {
 } from './ui/card';
 import { Badge } from './ui/badge';
 import { Leaf } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 
 const Menu = () => {
     const { t, language } = useLanguage();
@@ -20,13 +21,9 @@ const Menu = () => {
         sweets: '/category-images/sweets.jpeg',
     };
 
-    const renderMenuCategory = (category, title) => {
+    const renderMenuCategory = (category) => {
         return (
-            <div key={category} className='mb-12'>
-                {/* Category Title */}
-                <h3 className='text-2xl font-bold text-[#58432a] mb-6'>
-                    {t(category)}
-                </h3>
+            <div key={category} className='animate-in fade-in duration-500'>
                 {/* Category Image */}
                 {categoryImages[category] && (
                     <div className='relative w-full h-48 sm:h-64 md:h-80 rounded-lg overflow-hidden mb-8 shadow-md'>
@@ -42,9 +39,9 @@ const Menu = () => {
                 )}
                 {/* Category Items */}
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                    {menuItems[category].map((item) => (
+                    {menuItems[category].map((item, index) => (
                         <Card
-                            key={item.id}
+                            key={`${category}-${item.id}-${index}`}
                             className='border-[#d4af6e] hover:shadow-lg transition-shadow duration-300 bg-white/80 backdrop-blur-sm'
                         >
                             <CardHeader>
@@ -80,7 +77,7 @@ const Menu = () => {
     return (
         <section id='menu' className='py-20 bg-white'>
             <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-                <div className='text-center mb-16'>
+                <div className='text-center mb-12'>
                     <h2 className='text-4xl sm:text-5xl font-bold text-[#58432a] mb-4'>
                         {t('ourMenu')}
                     </h2>
@@ -93,9 +90,38 @@ const Menu = () => {
                 </div>
 
                 <div className='max-w-5xl mx-auto'>
-                    {renderMenuCategory('salty')}
-                    {renderMenuCategory('dips')}
-                    {renderMenuCategory('sweets')}
+                    <Tabs defaultValue="salty" className="w-full">
+                        <TabsList className="grid w-full grid-cols-3 mb-12 bg-[#fdf8f0] p-1 h-auto">
+                            <TabsTrigger 
+                                value="salty" 
+                                className="py-3 text-lg data-[state=active]:bg-[#d4af6e] data-[state=active]:text-white"
+                            >
+                                {t('salty')}
+                            </TabsTrigger>
+                            <TabsTrigger 
+                                value="dips" 
+                                className="py-3 text-lg data-[state=active]:bg-[#d4af6e] data-[state=active]:text-white"
+                            >
+                                {t('dips')}
+                            </TabsTrigger>
+                            <TabsTrigger 
+                                value="sweets" 
+                                className="py-3 text-lg data-[state=active]:bg-[#d4af6e] data-[state=active]:text-white"
+                            >
+                                {t('sweets')}
+                            </TabsTrigger>
+                        </TabsList>
+                        
+                        <TabsContent value="salty">
+                            {renderMenuCategory('salty')}
+                        </TabsContent>
+                        <TabsContent value="dips">
+                            {renderMenuCategory('dips')}
+                        </TabsContent>
+                        <TabsContent value="sweets">
+                            {renderMenuCategory('sweets')}
+                        </TabsContent>
+                    </Tabs>
                 </div>
             </div>
         </section>

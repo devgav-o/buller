@@ -33,7 +33,7 @@ export const translations = {
         freshIngredients: 'מרכיבים טריים',
         freshIngredientsDesc: 'רק הטוב ביותר בכל יום',
         madeWithLove: 'נעשה באהבה',
-        madeWithLoveDesc: 'כל מנה מוכנת בקפידה',
+        madeWithLoveDesc: 'כל מנה מוכנה בקפידה',
         localBusiness: 'עסק מקומי',
         localBusinessDesc: 'גאים להיות חלק מקהילת יוקנעם',
 
@@ -61,6 +61,7 @@ export const translations = {
         salty: 'מלוחים',
         dips: 'מטבלים Home Made (250 גר׳)',
         sweets: 'מתוקים',
+        vegan: 'טבעוני',
     },
     en: {
         // Navigation
@@ -122,6 +123,7 @@ export const translations = {
         salty: 'Savory',
         dips: 'Home Made Dips',
         sweets: 'Sweets',
+        vegan: 'Vegan',
     },
 };
 
